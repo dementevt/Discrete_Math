@@ -1,0 +1,61 @@
+﻿<Page x:Class="Discrete_Math.LogicOperationsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" Height="450" Width="800"
+      Title="Логические операции">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" MinHeight="82" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Grid.Row="0" FontSize="24" FontWeight="Bold" Margin="20,20,20,20">Логические операции</TextBlock>
+
+        <!-- Теоретический материал -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <TextBlock FontSize="18" FontWeight="Bold">Операции И, ИЛИ, НЕ</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="14">
+                    Логические операции - это операции, которые применяются к булевым значениям (true/false) и возвращают результат в виде булевого значения.
+                    Основными логическими операциями являются операция И (AND), операция ИЛИ (OR) и операция НЕ (NOT).
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="14">
+                    Операция И возвращает true только тогда, когда оба операнда являются true. Иначе результатом будет false.
+                    Например, выражение (2 > 1) AND (3 > 2) будет возвращать true, потому что оба условия выполняются.
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="14">
+                    Операция ИЛИ возвращает true, если хотя бы один из операндов является true. Если оба операнда false, то результатом будет false.
+                    Например, выражение (2 > 3) OR (3 > 2) будет возвращать true, потому что хотя бы одно из условий выполняется.
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="14">
+                    Операция НЕ (инверсия) принимает один операнд и возвращает true, если операнд false, и наоборот. Например, выражение NOT (2 > 3) будет возвращать true, потому что операнд (2 > 3) является false.
+                </TextBlock>
+            </StackPanel>
+            <ScrollViewer.Style>
+                <Style TargetType="{x:Type ScrollViewer}">
+                    <Style.Triggers>
+                        <Trigger Property="ExtentHeight" Value="0">
+                            <Setter Property="VerticalScrollBarVisibility" Value="Hidden" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ScrollViewer.Style>
+        </ScrollViewer>
+        <Button Content="Перейти к тестированию" 
+                Click="Button_Click_GoToTest" Grid.Row="2"
+                Margin="270,20,270,12" FontSize="16" 
+                Background="#007acc" Foreground="White"/>
+
+        <Button Content="Вернуться на главную страницу" 
+                Click="Button_Click_GoToMain" Grid.Row="3"
+                Margin="270,20,270,13" FontSize="16" 
+                Background="#007acc" Foreground="White"/>
+    </Grid>
+
+</Page>
