@@ -4,11 +4,51 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Discrete_Math"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="algoritm">
+      mc:Ignorable="d" Height="800" Width="1000"
+      Title="z">
 
-    <Grid>
-        
+    <Grid Margin="0 160 0 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" MinHeight="82" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Grid.Row="0" FontSize="24" FontWeight="Bold" Margin="20,-90,20,20">Алгоритмы</TextBlock>
+
+        <!-- Теоретический материал -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible" 
+                      HorizontalScrollBarVisibility="Disabled" Margin="0,-50,0,4"
+              CanContentScroll="True">
+            <StackPanel Height="370">
+                <TextBlock TextWrapping="Wrap" FontSize="15" Height="270" LineHeight="2">
+                        Алгоритмы являются важной темой в дискретной математике, так как они позволяют решать различные задачи, используя строго формализованные процессы. Алгоритмы могут быть описаны в терминах различных понятий, таких как графы, логика и алгебра.
+
+В общем случае алгоритм можно представить как последовательность шагов, которые необходимо выполнить для решения задачи. При этом каждый шаг должен быть корректен и выполняться за конечное время. Алгоритмы могут быть рекурсивными или итеративными, и могут использовать различные структуры данных, такие как массивы, списки, деревья и графы.
+
+Одним из самых известных алгоритмов в дискретной математике является алгоритм Дейкстры, который используется для поиска кратчайшего пути в графе. Алгоритм Дейкстры основан на принципе жадности и работает с положительными весами на ребрах графа.
+
+Еще один важный алгоритм - алгоритм Крускала, который используется для нахождения минимального остовного дерева в графе. Этот алгоритм также основан на принципе жадности и работает с взвешенными графами.
+
+Алгоритмы также могут быть использованы для решения задач комбинаторики, таких как задача о перестановках и сочетаниях. Один из таких алгоритмов - алгоритм Грея, который используется для генерации последовательностей без повторений.
+
+В целом, алгоритмы играют важную роль в дискретной математике и являются основой для решения многих задач. Они используются в различных областях, таких как компьютерная наука, теория игр, криптография и многие другие.</TextBlock>
+
+                <Button Content="Перейти к тестированию" 
+                        Click="Button_Click_GoToTest" Grid.Row="2"
+                        Margin="270,20,270,12" FontSize="16" 
+                        Background="#007acc" Foreground="White"/>
+
+                <Button Content="Вернуться на главную страницу" 
+                         Click="Button_Click_GoToMain" Grid.Row="3"
+                         Margin="270,20,270,13" FontSize="16" 
+                         Background="#007acc" Foreground="White"/>
+            </StackPanel>
+
+        </ScrollViewer>
+
     </Grid>
 </Page>
+

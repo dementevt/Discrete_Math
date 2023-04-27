@@ -29,9 +29,6 @@ namespace Discrete_Math
 
         private void Button_LogicOperations_Click(object sender, RoutedEventArgs e)
         {
-            //LogicOperationsPage myPage = new(); // создание экземпляра Page
-            //mainFrame.Content = myPage; // установка его в качестве содержимого Frame
-
             NavigationWindow navWin = new NavigationWindow();
             navWin.Content = new LogicOperationsPage();
             navWin.Show();
@@ -58,6 +55,7 @@ namespace Discrete_Math
         {
             NavigationWindow navWin = new();
             navWin.Content = new graph();
+            navWin.Show();
 
             // Скрываем главное окно
             Window window = Window.GetWindow(sender as DependencyObject);
@@ -68,21 +66,23 @@ namespace Discrete_Math
         {
             NavigationWindow navWin = new();
             navWin.Content = new algoritm();
+            navWin.Show();
 
             // Скрываем главное окно
             Window window = Window.GetWindow(sender as DependencyObject);
             window.Close();
         }
 
-        //private void Button_Struckt_Click(object sender, RoutedEventArgs e)
-        //{
+        private void Button_Struckt_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationWindow navWin = new();
+            navWin.Content = new struckt();
+            navWin.Show();
 
-        //}
-
-        //private void Button_Cryptograghy_Click(object sender, RoutedEventArgs e)
-        //{
-
-        //}
+            // Скрываем главное окно
+            Window window = Window.GetWindow(sender as DependencyObject);
+            window.Close();
+        }
 
         //Кнопка для вывода результатов тестов
         private string oldContents = "";

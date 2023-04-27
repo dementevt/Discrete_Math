@@ -24,5 +24,18 @@ namespace Discrete_Math
         {
             InitializeComponent();
         }
+
+        private void Button_Click_GoToMain(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Window.GetWindow(this).Close(); // Закрытие текущего окна (Page)
+        }
+
+        private void Button_Click_GoToTest(object sender, RoutedEventArgs e)
+        {
+            NavigationService nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new algoritmTest());
+        }
     }
 }
