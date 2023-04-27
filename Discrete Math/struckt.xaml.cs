@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ using System.Windows.Shapes;
 namespace Discrete_Math
 {
     /// <summary>
-    /// Логика взаимодействия для @struct.xaml
+    /// Логика взаимодействия для struckt.xaml
     /// </summary>
     public partial class struckt : Page
     {
@@ -24,5 +25,19 @@ namespace Discrete_Math
         {
             InitializeComponent();
         }
+
+        private void Button_Click_GoToMain(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Window.GetWindow(this).Close(); // Закрытие текущего окна (Page)
+        }
+
+        private void Button_Click_GoToTest(object sender, RoutedEventArgs e)
+        {
+            NavigationService nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new strucktTest());
+        }
     }
 }
+

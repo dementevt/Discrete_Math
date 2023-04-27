@@ -76,13 +76,25 @@ namespace Discrete_Math
 
             if (correctAnswersCount >= 3)
             {
+                MessageBox.Show("Тест пройден!");
+
+                //Изменяем цвет правильных ответов
+                RadioButton[] trueRadioButtons = { trueRadioButton, trueRadioButton2, trueRadioButton3, trueRadioButton4, trueRadioButton5, trueRadioButton6 };
+                foreach (RadioButton radioButton in trueRadioButtons)
+                {
+                    if (radioButton.IsChecked == true)
+                    {
+                        radioButton.Foreground = Brushes.Green;
+                    }
+                }
+
                 // Записываем число правильных ответов в файл
                 string path = "Z:\\Documents\\thirdCourse\\Discrete Math\\Discrete Math\\correct_answers.txt";
                 try
                 {
                     using (StreamWriter sw = File.CreateText(path))
                     {
-                        sw.WriteLine("Комбинаторика: " + correctAnswersCount + "\n");
+                        sw.WriteLine("Оценка по комбинаторика: " + correctAnswersCount + "\n");
 
                         // вывод результата в TextBlock
                         resultTextBlock.Text = "Количество правильных ответов: " + correctAnswersCount;
@@ -91,6 +103,33 @@ namespace Discrete_Math
                 catch (Exception ex)
                 {
                     MessageBox.Show("Произошла ошибка при записи файла: " + ex.Message);
+                }
+
+                // Неправильный ответ, меняем цвет фона RadioButton'ов с неправильными ответами
+
+                // Создание массива StackPanel
+                StackPanel[] stackPanels = new StackPanel[] { stackPanel, stackPanel2, stackPanel3, stackPanel4, stackPanel5, stackPanel6 };
+
+                // Перебор каждого StackPanel
+                foreach (StackPanel sp in stackPanels)
+                {
+                    // Перебор каждого дочернего элемента StackPanel
+                    foreach (object radioButton in sp.Children)
+                    {
+                        if (radioButton is RadioButton)
+                        {
+                            if ((bool)(radioButton as RadioButton).IsChecked == false && radioButton != falseRadioButton &&
+                                radioButton != trueRadioButton2 && radioButton != trueRadioButton3 &&
+                                radioButton != trueRadioButton4 && radioButton != falseRadioButton5 && radioButton != falseRadioButton6)
+                            {
+                                (radioButton as RadioButton).Background = Brushes.Red;
+                            }
+                            else
+                            {
+                                (radioButton as RadioButton).Background = Brushes.Transparent;
+                            }
+                        }
+                    }
                 }
             }
             else

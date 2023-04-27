@@ -17,7 +17,7 @@
                    FontWeight="Bold">Тест по теории графов</TextBlock>
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Margin="0,0,0,49"
               CanContentScroll="True" Grid.RowSpan="3">
-            <StackPanel Margin="30,10,10,0" Height="465" >
+            <StackPanel Margin="30,10,10,0" Height="465" Name="stackPanel">
                 <TextBlock Margin="15 10 15 10" TextWrapping="Wrap"
                            FontSize="15">Вопрос 1: Что такое граф?</TextBlock>
                 <StackPanel Orientation="Vertical" >
@@ -28,35 +28,35 @@
 
                 <TextBlock Margin="15 10 15 10" FontSize="15" 
                            TextWrapping="Wrap">Вопрос 2: Что такое вершина в графе?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel2">
                     <RadioButton Content="Элемент графа, обозначающий объект или сущность." Name="trueRadioButton2" FontSize="14"/>
                     <RadioButton Content="Отрезок между двумя точками." FontSize="14"/>
                     <RadioButton Content="Точка на плоскости." FontSize="14"/>
                 </StackPanel>
 
                 <TextBlock Margin="15 10 15 10" FontSize="15" TextWrapping="Wrap">Вопрос 3: Что такое ребро в графе?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel3">
                     <RadioButton Content="Элемент графа, обозначающий связь между вершинами." Name="trueRadioButton3" FontSize="14"/>
                     <RadioButton Content=" Отрезок между двумя точками." FontSize="14"/>
                     <RadioButton Content="Математическая операция над числами." FontSize="14"/>
                 </StackPanel>
 
                 <TextBlock Margin="15 10 15 10" FontSize="15" TextWrapping="Wrap">Вопрос 4: Что такое степень вершины в графе?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel4">
                     <RadioButton Content=" Количество ребер, исходящих из данной вершины." Name="trueRadioButton4" FontSize="14"/>
                     <RadioButton Content="Количество вершин, с которыми данная вершина соединена ребрами." FontSize="14"/>
                     <RadioButton Content="Количество прямоугольников, которые можно построить на данной вершине." FontSize="14"/>
                 </StackPanel>
 
                 <TextBlock Margin="15 10 15 10" FontSize="15" TextWrapping="Wrap">Вопрос 5: Какие бывают графы?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel5">
                     <RadioButton Content="Связные и несвязные." FontSize="14"/>
                     <RadioButton Content="Неориентированные и ориентированные." Name="trueRadioButton5" FontSize="14"/>
                     <RadioButton Content="Полные и неполные." FontSize="14"/>
                 </StackPanel>
 
                 <TextBlock Margin="15 10 15 10" FontSize="15" TextWrapping="Wrap">Вопрос 6: Что такое связный граф?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel6">
                     <RadioButton Content="Граф, в котором есть хотя бы одна вершина." FontSize="14"/>
                     <RadioButton Content="Граф, в котором любые две вершины соединены ребром.." Name="trueRadioButton6" FontSize="14"/>
                     <RadioButton Content="Граф, в котором нет циклов." FontSize="14"/>

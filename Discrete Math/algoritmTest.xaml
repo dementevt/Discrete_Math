@@ -21,7 +21,7 @@
                    FontWeight="Bold">Тест по алгоритмам</TextBlock>
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Margin="0,0,0,49"
               CanContentScroll="True" Grid.RowSpan="3">
-            <StackPanel Margin="30,10,10,0" Height="465" >
+            <StackPanel Margin="30,10,10,0" Height="465" Name="stackPanel">
                 <TextBlock Margin="15 10 15 10" TextWrapping="Wrap"
                            FontSize="15">Вопрос 1: Что такое алгоритм?</TextBlock>
                 <StackPanel Orientation="Vertical" >
@@ -32,35 +32,35 @@
 
                 <TextBlock Margin="15 10 15 10" FontSize="15" 
                            TextWrapping="Wrap">Вопрос 2: Что такое сложность алгоритма?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel2">
                     <RadioButton Content="Количество операций, необходимых для выполнения алгоритма" Name="trueRadioButton2" FontSize="14"/>
                     <RadioButton Content="Сложность задачи, решаемой алгоритмом" FontSize="14"/>
                     <RadioButton Content="Количество параметров, передаваемых в алгоритм" FontSize="14"/>
                 </StackPanel>
 
                 <TextBlock Margin="15 10 15 10" FontSize="15" TextWrapping="Wrap">Вопрос 3: Что такое асимптотическая сложность алгоритма?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel3">
                     <RadioButton Content="Сложность алгоритма при наихудшем варианте входных данных" Name="trueRadioButton3" FontSize="14"/>
                     <RadioButton Content=" Сложность алгоритма при наилучшем варианте входных данных" FontSize="14"/>
                     <RadioButton Content="Сложность алгоритма при фиксированных входных данных" FontSize="14"/>
                 </StackPanel>
 
                 <TextBlock Margin="15 10 15 10" FontSize="15" TextWrapping="Wrap">Вопрос 4: Какие виды сложности алгоритмов бывают?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel4">
                     <RadioButton Content="Временная и пространственная" Name="trueRadioButton4" FontSize="14"/>
                     <RadioButton Content="Линейная и квадратичная" FontSize="14"/>
                     <RadioButton Content="Наилучшая и наихудшая" FontSize="14"/>
                 </StackPanel>
 
                 <TextBlock Margin="15 10 15 10" FontSize="15" TextWrapping="Wrap">Вопрос 5: Что такое сортировка?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel5">
                     <RadioButton Content="Процесс нахождения оптимального решения задачи" FontSize="14"/>
                     <RadioButton Content="Процесс упорядочивания элементов в заданном наборе данных" Name="trueRadioButton5" FontSize="14"/>
                     <RadioButton Content="Процесс проверки корректности входных данных" FontSize="14"/>
                 </StackPanel>
 
                 <TextBlock Margin="15 10 15 10" FontSize="15" TextWrapping="Wrap">Вопрос 6: Какой алгоритм сортировки является самым быстрым для больших наборов данных?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel6">
                     <RadioButton Content="Сортировка пузырьком" FontSize="14"/>
                     <RadioButton Content="Быстрая сортировка" Name="trueRadioButton6" FontSize="14"/>
                     <RadioButton Content="Сортировка выбором" FontSize="14"/>

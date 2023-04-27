@@ -17,42 +17,42 @@
               CanContentScroll="True" Grid.RowSpan="3">
             <StackPanel Margin="30,10,10,0" Height="465" >
                 <TextBlock Margin="15 10 15 10" FontSize="15">Вопрос 1: Какое значение будет иметь выражение "false AND true"?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel">
                     <RadioButton Content="true" FontSize="14"/>
                     <RadioButton Content="false" Name="falseRadioButton" FontSize="14"/>
                     <RadioButton Content="undefined" FontSize="14"/>
                 </StackPanel>
 
                 <TextBlock Margin="15 10 15 10" FontSize="15">Вопрос 2: Какое значение будет иметь выражение "true OR false"?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel2">
                     <RadioButton Content="true" Name="trueRadioButton2" FontSize="14"/>
                     <RadioButton Content="false" FontSize="14"/>
                     <RadioButton Content="undefined" FontSize="14"/>
                 </StackPanel>
 
                 <TextBlock Margin="15 10 15 10" FontSize="15">Вопрос 3: Каков результат логической операции "НЕ" для ложного значения?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel3">
                     <RadioButton Content="true" Name="trueRadioButton3" FontSize="14"/>
                     <RadioButton Content="false" FontSize="14"/>
                     <RadioButton Content="undefined" FontSize="14"/>
                 </StackPanel>
 
                 <TextBlock Margin="15 10 15 10" FontSize="15">Вопрос 4:Каков результат логической операции "ИСКЛЮЧАЮЩЕЕ ИЛИ" между истиной и ложью?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel4">
                     <RadioButton Content="true" Name="trueRadioButton4" FontSize="14"/>
                     <RadioButton Content="false" FontSize="14"/>
                     <RadioButton Content="undefined" FontSize="14"/>
                 </StackPanel>
 
                 <TextBlock Margin="15 10 15 10" FontSize="15">Вопрос 5: Каков результат логической операции "И" между двумя ложными значениями?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel5">
                     <RadioButton Content="true" FontSize="14"/>
                     <RadioButton Content="false" Name="falseRadioButton5" FontSize="14"/>
                     <RadioButton Content="undefined" FontSize="14"/>
                 </StackPanel>
 
                 <TextBlock Margin="15 10 15 10" FontSize="15">Вопрос 6: Каков результат логической операции "ИЛИ" между двумя ложными значениями?</TextBlock>
-                <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="stackPanel6">
                     <RadioButton Content="true" FontSize="14"/>
                     <RadioButton Content="false" Name="falseRadioButton6" FontSize="14"/>
                     <RadioButton Content="undefined" FontSize="14"/>
