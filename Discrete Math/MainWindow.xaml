@@ -26,8 +26,8 @@
                     Background="#007acc" Foreground="White" Click="Button_Grapg_Click"/>
             <Button Content="Алгоритмы" Margin="90 20 90 0" FontSize="14"
                     Background="#007acc" Foreground="White" Click="Button_Algoritm_Click"/>
-            <Button Content="Алгебраические структуры" Margin="90 20 90 0" FontSize="14"
-                    Background="#007acc" Foreground="White" Click="Button_Struckt_Click"/>
+            <!--<Button Content="Алгебраические структуры" Margin="90 20 90 0" FontSize="14"
+                    Background="#007acc" Foreground="White" Click="Button_Struckt_Click"/>-->
             <!--<Button Content="Криптография" Margin="90 20 90 0" FontSize="14" 
                     Background="#007acc" Foreground="White" Click="Button_Cryptograghy_Click"/>-->
         </StackPanel>
@@ -40,8 +40,8 @@
                  SelectionChanged="ListBox_SelectionChanged"/>-->
         <!--<ProgressBar Grid.Row="2" Height="20" Margin="15,25,15,10" x:Name="mainBar"
                         Value="0" Minimum="0" Maximum="120"/>-->
-        <Frame Name="mainFrame"  NavigationUIVisibility="Hidden" 
-               Margin="-170, 15,-170,15" Grid.RowSpan="4" />
+        <!--<Frame Name="mainFrame"  NavigationUIVisibility="Visible" 
+               Margin="-180, 15,-180,15" Grid.RowSpan="4" />-->
         <Button Margin="278,27,33,4" Grid.Row="1" Content="Показать результаты:"
                 Click="Button_Click" Background="LightGray" Foreground="White"/>
     </Grid>

@@ -1,14 +1,80 @@
 ﻿<Page x:Class="Discrete_Math.combinatoricaTest"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Discrete_Math"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="combinatoricaTest">
-
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Тест по комбинаторики" 
+        Background="#f5f5f5"
+        Height="600" Width="900">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Margin="15,15,15,10" FontSize="20" 
+                   HorizontalAlignment="Center" 
+                   FontWeight="Bold">Тест по комбинаторики</TextBlock>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Margin="0,0,0,49"
+              CanContentScroll="True" Grid.RowSpan="3">
+            <StackPanel Margin="30,10,10,0" Height="465" >
+                <TextBlock Margin="15 10 15 10" TextWrapping="Wrap"
+                           FontSize="15">Вопрос 1: Сколько различных трехбуквенных слов можно составить из букв А, Б, В, Г, Д, если в слове буквы могут повторяться?</TextBlock>
+                <StackPanel Orientation="Vertical" >
+                    <RadioButton Content="60" FontSize="14"/>
+                    <RadioButton Content="216" Name="trueRadioButton" FontSize="14"/>
+                    <RadioButton Content="125" FontSize="14"/>
+                    <RadioButton Content="343" FontSize="14"/>
+                </StackPanel>
+
+                <TextBlock Margin="15 10 15 10" FontSize="15" TextWrapping="Wrap">Вопрос 2: В круглом зале есть 10 стульев, пронумерованных по часовой стрелке. Сколькими способами можно выбрать 3 стула, чтобы никакие два из них не были соседними?</TextBlock>
+                <StackPanel Orientation="Vertical" >
+                    <RadioButton Content="120" Name="trueRadioButton2" FontSize="14"/>
+                    <RadioButton Content="80" FontSize="14"/>
+                    <RadioButton Content="140" FontSize="14"/>
+                    <RadioButton Content="40" FontSize="14"/>
+                </StackPanel>
+
+                <TextBlock Margin="15 10 15 10" FontSize="15" TextWrapping="Wrap">Вопрос 3: Сколькими способами можно выбрать 5 книг из 10, если среди этих 10 книг есть 2 одинаковых набора, каждый из которых состоит из 3 книг?</TextBlock>
+                <StackPanel Orientation="Vertical" >
+                    <RadioButton Content="200" Name="trueRadioButton3" FontSize="14"/>
+                    <RadioButton Content="180" FontSize="14"/>
+                    <RadioButton Content="220" FontSize="14"/>
+                    <RadioButton Content="240" FontSize="14"/>
+                </StackPanel>
+
+                <TextBlock Margin="15 10 15 10" FontSize="15" TextWrapping="Wrap">Вопрос 4: Сколькими способами можно распределить 6 разных книг между 3 друзьями, если каждый из них должен получить по 2 книги?</TextBlock>
+                <StackPanel Orientation="Vertical" >
+                    <RadioButton Content="60" Name="trueRadioButton4" FontSize="14"/>
+                    <RadioButton Content="25" FontSize="14"/>
+                    <RadioButton Content="15" FontSize="14"/>
+                    <RadioButton Content="30" FontSize="14"/>
+                </StackPanel>
+
+                <TextBlock Margin="15 10 15 10" FontSize="15" TextWrapping="Wrap">Вопрос 5: Сколько существует различных 6-значных чисел, сумма цифр которых равна 42? </TextBlock>
+                <StackPanel Orientation="Vertical" >
+                    <RadioButton Content="105" FontSize="14"/>
+                    <RadioButton Content="210" Name="trueRadioButton5" FontSize="14"/>
+                    <RadioButton Content="420" FontSize="14"/>
+                    <RadioButton Content="840" FontSize="14"/>
+                </StackPanel>
+
+                <TextBlock Margin="15 10 15 10" FontSize="15" TextWrapping="Wrap">Вопрос 6: Сколько существует различных слов, которые можно составить из букв слова "ОБОРОНОСПОСОБНОСТЬ", если каждую букву можно использовать неограниченное количество раз?</TextBlock>
+                <StackPanel Orientation="Vertical" >
+                    <RadioButton Content="22 670 720" FontSize="14"/>
+                    <RadioButton Content="244 662 319 680 000" Name="trueRadioButton6" FontSize="14"/>
+                    <RadioButton Content="2 251 799 813 685 248" FontSize="14"/>
+                    <RadioButton Content="30 764 800" FontSize="14"/>
+                </StackPanel>
+
+                <Button Grid.Row="2" Content="Проверить ответы" Margin="10 20 0 10" Name="checkButton" Click="FinishTestButton_Click" 
+                        Background="#0099ff" Foreground="White" Padding="15,5,15,5" BorderThickness="0" FontWeight="Bold" HorizontalAlignment="Left" />
+
+
+                <Button Grid.Row="2" Content="Выйти в главное меню" Margin="10 20 0 10" Name="GoMainButton" Click="Button_Click_GoToMain" 
+                        Background="#0099ff" Foreground="White" Padding="15,5,15,5" BorderThickness="0" FontWeight="Bold" HorizontalAlignment="Left" />
+                <TextBlock Grid.Row="3" Name="resultTextBlock" Margin="15 10 15 10" FontSize="20"></TextBlock>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
